@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Journal</title>
+</head>
+
+<body>
+    <pre>
+        <br><br>
+#program to find the year in which you will be 100 years old from datetime import datetime name=input("enter your name:") age=int(input("enter your age:")) year=str((datetime.now().year-age)+100) print(name+"you will be 100 years old in",year) 
+ 
+ 
+ 
+ <br><br>
+#program to find whether the user input is even or odd num=int(input("enter any integer value:")) 
+r=num%2 
+if r==0: 
+   print("number is even") else:    print("number is odd") 
+ 
+ 
+ 
+ 
+ 
+ <br><br>
+#program to find fibonacci series 
+(0,1,1,2,3,5,8) terms=int(input("how many terms")) f1=0 f2=1 for i in range (0,terms):     if(i<=1):         f3=i 
+    else:         f3=f1+f2         f1=f2         f2=f3         print(f3) 
+ 
+ 
+ 
+ 
+ 
+ <br><br>
+
+#program to reverse a user input num=int(input("enter any integer")) reverse=0 while num!=0:     rem=num%10     reverse=reverse*10+rem     num=num//10     print("reverse number=",reverse) 
+ 
+ 
+ 
+ 
+ 
+ <br><br>
+
+ 
+#program to reverse a user input number using function def reverse(num): 
+    r=0 
+    while num !=0:         rem=num%10         r=r*10+rem         num=num//10 
+    return r 
+#main module num=int(input("enter any integer value:")) s=reverse(num) print("reverse number=",s) 
+ 
+ 
+ 
+ 
+ <br><br>
+#program to find the sum of digits of user input number num=int(input("enter any positive number")) sum=0 
+while num!=0:     rem=num%10     sum=sum+rem     num=num//10 print("sum of digits of number=",sum) 
+ 
+ 
+ 
+ 
+ <br><br>
+#program to find the factorial of user input number n=int(input("enter any integer value")) fact=1 for i in range (1,n+1,1):     
+fact=fact*i print("factorial=",fact) 
+ 
+ <br><br>
+
+#program to find factorial of user input using function def factorial(n): 
+    fact=1     for i in range(1,n+1,1): 
+        fact=fact*i     return fact 
+#main module 
+n=int(input("enter any integer value")) f=factorial(n) print("factorial",f) 
+ 
+ 
+ 
+ 
+ <br><br>
+#write a recursive function to print factorial of a given number def fact(x):     if x==1 or x==0:         return 1     else: 
+        return(x*fact(x-1)) 
+ 
+#main module num=int(input("enter any number:")) print("the factorial of",num,"is:",fact(num)) #write a program to check whether a input number is armstrong num=int(input("enter any number")) sum=0 temp=num 
+while temp>0:     rem=temp%10     sum=sum+rem**3     temp=temp//10 if num==sum: 
+    print(num,"is an armstrong number") 
+else: 
+    print(num,"is not an armstrong number") 
+ 
+ 
+ <br><br>
+ 
+#write a code to check whether a input number is palindrome num=int(input("enter any number:")) reverse=0 
+temp=num while num!=0:     rem=num%10     reverse=reverse*10+rem     num=num//10 if temp==reverse: 
+    print(temp,"is a palindrome number") 
+else: 
+print(temp,"is not a palindrome number") 
+#an interactive program to check palindrome,sum of digits,armstrong def palindrome(num) : 
+    sum = 0     temp = num 
+     
+    while (num != 0) :         rem = num % 10         sum = sum * 10 + rem         num = num // 10 
+     
+    if (temp == sum) : 
+        print(temp, "is a Palindrome number") 
+    else : 
+        print(temp, "is not a Palindrome number") 
+ 
+def armstrong(num) : 
+    sum = 0     temp = sum 
+     
+    while (temp > 0) :         rem = temp % 10         sum = sum + rem**3         temp = temp // 10 
+     
+    if (num == sum) : 
+        print(num, "is an Armstrong number") 
+    else : 
+        print(num, "is not an Armstrong number") 
+def sum_of_digit(num) : 
+    sum = 0 
+     
+    while (num != 0) :         rem = num % 10         sum = sum + rem         num = num // 10     print("Sum of digits=", sum) 
+ 
+def reverse(num) : 
+    sum = 0 
+     
+    while (num != 0) :         rem = num % 10         sum = sum * 10 + rem         num = num // 10     print("Reverse of", n, "=", sum) 
+     
+while True : 
+    print("\n\n\n\t\t Main Menu")     print("1. Find Reverse of Number")     print("2. Find the number is a Palindrome")     print("3. Find Sum of digits of a number")     print("4. Find the number is Armstrong number") 
+    print("5. Exit")     print("Enter your choice(1-5) : ") 
+     
+    choice = int(input()) 
+     
+if (choice >= 1) and (choice < 5) : 
+        n = int(input("Enter any number :"))     if (choice == 1) : 
+        reverse(n)     elif (choice == 2) :         palindrome(n)     elif (choice == 3) :         sum_of_digit(n)     elif (choice == 4) :         armstrong(n)     else : 
+        print("Program is terminated.")         break 
+ 
+ 
+ 
+<br><br>
+""" 
+Write an interactive menu driven program to find Area of Circle, Square, Rectangle and Triangle. 
+""" def area_of_circle() :     r = int(input("Enter radius : "))     area = 3.14 * r * r     print("Area of Circle :", area) 
+     
+def area_of_rectangle() : 
+    l = int(input("Enter length : "))     b = int(input("Enter breadth : ")) 
+     
+    area = l * b  
+    print("Area of Rectangle :", area) 
+ 
+def area_of_square() : 
+    s = int(input("Enter any number : ")) 
+     
+    area = s * s      print("Area of Square :", area) 
+ 
+def area_of_triangle() : 
+    b = int(input("Enter base : "))     h = int(input("Enter height : ")) 
+     
+    area = 1.0 / 2 * b * h     print("Area of Triangle :", area) 
+ 
+while 1 : 
+    print("\n\n\t\t Main Menu")     print("1. Find Area of Cicle")     print("2. Find Area of Square")     print("3. Find Area of Rectangle")     print("4. FInd Area of Triangle")     print("5. Exit") 
+     
+    choice = int(input("Enter your choice (1-5) : ")) 
+     
+    if (choice == 1) :         area_of_circle()     elif (choice == 2) :         area_of_square()     elif (choice == 3) :         area_of_rectangle()     elif (choice == 4) :         area_of_triangle()     else : 
+        print("Program is terminated")         break 
+ 
+ 
+ 
+ <br><br>
+""" 
+Write a program to find area triangle when 3 sides are given 
+""" 
+import math 
+ 
+a = int(input("\n Enter first side : ")) b = int(input("\n Enter second side : ")) c = int(input("\n Enter third side : ")) 
+ 
+s = (a + b + c) / 2 area = math.sqrt(s * (s - a) * (s - b) * (s - c)) print("\n Area of Triangle =", area) 
+ 
+ <br><br>
+
+ 
+ 
+""" 
+Write a program to print the following pattern  
+1 
+22 
+333 
+4444 
+55555 
+""" 
+k = 1 
+ 
+for i in range(1, 6, 1) :     for j in range(i) :         print(k, end="")     k = k + 1     print() 
+ 
+ 
+ <br><br>
+ 
+""" 
+Write a program to print the following pattern 
+* 
+** 
+*** 
+**** 
+***** 
+""" 
+ 
+k = 1 
+ 
+for i in range(1, 6, 1) :     for j in range(i) :         print("*", end="")     print() 
+ 
+ 
+ 
+ <br><br>
+""" 
+Write a program to print the following pattern. 
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+11 12 13 14 15 
+16 17 18 19 20 21 
+""" k = 1 
+ 
+for i in range(1, 7, 1) :     for j in range(i) :         print(k, end="\t") 
+        k = k + 1     print("\t") 
+ 
+ 
+ 
+ 
+ <br><br>
+""" 
+Write a program to demonstrate use of the continue statement. 
+""" 
+ 
+for i in range(4) :     if (i == 2) :         continue     print(i) 
+ 
+ <br><br>
+ 
+""" 
+Write a program to find Maximum number out of two numbers using a function. """ 
+ 
+def FnMax(s, t) : 
+    if (s > t) : 
+        print(s,"is maximum") 
+    elif (s == t) : 
+        print(s, "is equal to", t)     else : 
+        print(t, "is maximum") 
+ 
+FnMax(11,34) 
+ 
+ 
+ 
+ <br><br>
+# Q.20) Write a program to display Fibonacci Series using a recursive function. 
+def fib(n) :     if n<=1 :         return n     else : 
+        return (fib(n-1)+fib(n-2)) 
+ 
+nt = int(input("Enter the numbers of terms : ")) 
+ 
+for i in range(nt) : 
+    print(fib(i)) 
+ 
+ <br><br>
+
+ 
+# Q.21) Write a program to traverse string using ‘for’ loop. st = "jasbir kaur" i = 0 
+ 
+for i in st :     print(i) 
+ 
+ 
+ 
+<br><br>
+
+# Q.22) Write a program to traverse string using ‘while’ loop. 
+st = "YASHU VEDU" 
+i = 0 
+ 
+while i < len(st) : 
+    a = st[i]     print(a)     i = i + 1 
+     
+ 
+ 
+ <br><br>
+ 
+# Q.23) Write a program to demonstrate the use of Slice operator in string. 
+st = "neha" 
+print(st) 
+ 
+for i in st : 
+    print(st.index(i),i) 
+ 
+print("st[:5] =", st[:6]) print("st[3:] =", st[3:]) print("st[2:4] =", st[2:4]) 
+ 
+ 
+ 
+ 
+ 
+<br><br>
+ 
+# Q.24) Write a program for linear search. 
+s	= [5, 25, 13, 7, 180, 20, 99, 45] data = int(input("Enter element to be searched : ")) flag = 0 
+ 
+for i in s:     if i == data :         flag = 1         break if flag == 1 : 
+    print(data, "is present in list at index", s.index(i)) else :     print(data, "is not present in list") 
+ 
+ 
+ 
+ <br><br>
+ 
+ 
+# Q.25) Write a program to search for a specific position of character in string.  def find(st, a) : 
+    i = 0     while i < len(st) :         if st[i] == a :             return i         i = i + 1 
+    return -1 print(find("Tushar",'s')) 
+ 
+ <<br><br>
+><br>
+
+ 
+# Q.26) Write a program to count the number of times the letter appears in string. 
+t	= "TUSHAR SAMBARE" 
+n = 0 
+for i in t :     if i == 'A' :         n = n + 1 
+print(n) 
+ 
+ 
+ <br><br>
+ 
+# Q.27) Write a program to check if a string is a Palindrome. 
+st1 = "madam" 
+st2 = st1[::-1] if st1 == st2 : 
+    print("String is Palindrome") else : 
+    print("String is not Palindrome")  
+ 
+ 
+ <br><br>
+ 
+# Q.28) Write a program to find common elements in two lists. def common_data(list1, list2) : 
+    result = False 
+    for x in list1 :         for y in list2 :             if x == y : 
+                print("Common Elements :", x)                 result = True 
+    return result list1 = [1,2,3,4,5] list2 = [6,7,8,9,10,34] list3 = [1,2,5,8,9] 
+RESULT = common_data(list1, list2) print(RESULT) 
+RESULT = common_data(list2, list3) print(RESULT) 
+ 
+ 
+ 
+ <br><br>
+ 
+# Q.29) Write a program for printing the list by omitting 0th, 3rd, 5th element. List1 = ["Jasbir", "Rutik", "Ankita", "Renu", "Rini", "Gini", "Ganesg"] for x in range(len(List1)) : 
+    print("List [" + str(x) + "] = ",List1[x]) print() print("List after removal :") List1.remove(List1[0]) print(List1) 
+List1.remove(List1[3]) print(List1) 
+"""List1.remove(List1[5]) print(List1) 
+""" 
+ 
+ 
+ 
+ <br><br>
+ 
+# Q.30) Write a program for printing the list by omitting 0th, 3rd, 5th element. def list_less5(list) :     for i in list :         if i < 5 :             print(i) 
+S = int(input("Enter size of list :")) list = [] 
+for i in range(1, S + 1) : 
+    n = int(input("Enter " + str(i) + " element : "))     list.append(n) 
+    print(list) list_less5(list) 
+ 
+ 
+ <br><br>
+ 
+ 
+# Q.31) Write a program to procedure histogram(), that takes a list of integers and prints a histogram on the screen. 
+def histogram(list1) : 
+    for i in list1 :         output = ''         time = i         while (time > 1) :             output += '*'             time = time - 1         print(output) 
+histogram([10,20,3,20]) 
+ 
+ 
+ 
+ <br><br>
+
+ 
+# Q.32) Write a function that takes a character and returns true if it is a vowel, false otherwise. def vowel_check(ch) : 
+    if (ch == 'a' or ch == 'e' or ch == 'i' or ch == 'o' or ch == 'u') : 
+        print(ch, " is a vowel")     elif (ch == 'A' or ch == 'E' or ch == 'I' or ch == 'O' or ch == 'U') : 
+        print(ch, " is a vowel") 
+    else : 
+        print(ch, " is not a vowel") while True : 
+    ch = input("Enter any character(A-Z)/(a-z) only : ")     vowel_check(ch)     print("Do you want to try again ? (Y/N) : ")     ch = input("Enter your choice : ") 
+    if (ch == 'N' or ch == 'n') : 
+        break 
+ 
+ 
+ <br><br>
+ 
+#Program to Deleting Elements from Dictionary. d = {"Name" : "Arti", "Age" : 19, "School" : "SIES"} del d["Name"] 
+print(d) 
+d.clear() print(d) del d print("Dictionary Deleted") 
+ 
+ 
+ 
+<br><br>
+
+#Program to demonstrate various operations in the Dictionary. 
+d = {"Name" : "tushar", "Age" : 19, "School" : "SIES"} print(len(d)) print(1 in d) print(2 not in d) print(49 in d) del d["School"] print(d) del d print("Dictionary Deleted") 
+ 
+ 
+ <br><br>
+
+ 
+#Program to concatenate two dictionaries to create a new dictionary.(Method-1) dict1 = {1 : 10, 2 : 20} dict2 = {3 : 30, 4 : 40, 5 : 50} dict3 = {} 
+ditc4 = {} 
+dict3.update(dict1) dict3.update(dict2) dict4 = {**dict1, **dict2} print("Dictionary-1") print(dict1) print("Dictionary-2") print(dict2) print("Dictionary-3") print(dict3) print("Dictionary-4") print(dict4) 
+ 
+ 
+ 
+ 
+<br><br>
+
+#Program to concatenate two dictionaries to create a new dictionary.(Method-2) 
+dict1 = {1 : "Tushar", 2 : "Kiran"} dict2 = {3 : 30, 4 : 40, 5 : 50, 6 : 60} dict3 = {} for d in (dict1, dict2):     dict3.update(d) print("The concatenated dictionary is : ") print(dict3) 
+ 
+ 
+ 
+ <br><br>
+
+#Program to merge two dictionaries using functions. def Merge(dict1, dict2):     res = {**dict1, **dict2} 
+    return res #Driver Code dict1 = {"a" : 10, "b" : 8} dict2 = {"d" : 6, "c" : 4} dict3 = Merge(dict1, dict2) print(dict3) 
+ 
+ <br><br>
+ 
+#Program to sum all the values in a dictionary. dict1 = {1 : 10, 2 : 20, 3 : 30, 4 : 40, 5 : 50} print(dict1) s = sum(dict1.values()) print("Sum = ", s) 
+ <br><br>
+
+ 
+ 
+#Program to sum all the values in a dictionary using a function. 
+def returnSum(myDict): 
+    sum = 0     for i in myDict:         sum = sum + myDict[i]     return sum #main module 
+dict = {"K1" : 20, "K2" : 7, "K3" : 90, "K4" : 12} print("Sum : ", returnSum(dict)) 
+ 
+ 
+ 
+ <br><br>
+ 
+#Program to sort a dictionary. 
+import operator 
+Dict1 = {1 : 22, 3 : 13, 4 : 8, 2 : 11, 0 : 27} d3 = {2 : 100, 3 : 200, 34 : 400, 5 : 500} print(Dict1) t = sorted(Dict1.items()) print("In Ascending Order by value : ", t) t = sorted(Dict1.items(), reverse = True) print("In Descending order by value : ", t) t1 = sorted(d3.items(), reverse = True) print("In Descending order by value : ", t1) 
+ 
+ 
+ <br><br>
+
+ 
+#python program to create a file f1.py f1=open("t1.txt","w") f1.write("good morning") f1.write("xyz") 
+ 
+ 
+ <br><br>
+#python program to check attribute of file object f1=open("t1.txt","r+") print("name of the file :",f1.name) print("file is closed or not :",f1.closed) print("file mode:",f1.mode) 
+f1.close() print("file closed or not:",f1.closed) #python program to read an entire text file f1=open("t1.txt","r") print(f1.read()) f1.close() f1=open("t1.txt","r") print(f1.read(10)) 
+ 
+ <br><br>
+
+ 
+#program to demonstrate the use of readline()and readline[] f1=open("t1.txt","r") print(f1.readline()) f1.close() print("use of readlines function") f1=open("t1.txt","r") print(f1.readlines()) f1.close() 
+ 
+ <br><br>
+ 
+ 
+ 
+ 
+#program to demonstrate the use of tell()& seek()method f=open("t1.txt","r+") st=f.read(6) print("read string:",st) pos=f.tell() print("current position of file pointer:",pos) st=f.read(6) 
+print("current position of the file pointer:",pos) pos1=f.seek(0,0) print("current position of file pointer:",pos1) st=f.read(8) print("again read the string:",st) 
+f.close() 
+ 
+ <br><br>
+ 
+ 
+ 
+#program to enter as many names as you want in file f=open("name.txt","w") 
+while 1: 
+    N=input("enter name:") 
+    f.write(N) 
+    f.write("\n") 
+    print("do you want to write more name?:")     choice=input("\n enter 'Y '/ 'N':") 
+    if choice !='Y': 
+        break     print 
+f.close() 
+ 
+ 
+ 
+ <br><br>
+
+#program to demonstrate the use of readline()readline[]function import os f1=open("name.txt","r") print("output of ():") 
+print(f1.read()) print("output of read(6):") print(f1.read(6)) print("output of readlines()") print(f1.readlines()) f1.close() 
+ 
+ <br><br>
+
+ 
+ 
+#program to demonstrate exception handling  while True: 
+    try: 
+        x=int(input("enter a number:"))         r=100/x 
+ 
+    except ValueError: 
+        print("value is not int type ")     except ZeroDivisionError:         print("denominator is zero") 
+    else: 
+        print(r) 
+ 
+ 
+ <br><br>
+
+ 
+ 
+#program to demonstrate exception handling using try and except 
+ 
+while True: 
+try: 
+        x=int(input("enter a no.="))         r=100/x     except(ValueError,ZeroDivisionError): 
+        print("something is wrong") 
+    else: 
+        print(r) 
+ 
+ 
+ 
+ <br><br>
+
+ 
+ 
+#program of exception handling to demonstrate use of finally cross while True: 
+    try: 
+        x=int(input("enter a no.="))         r=100/x 
+    except(ValueError,ZeroDivisionError): 
+        print("something is wrong") 
+    else: 
+        print(r)     finally:print("file closed") 
+     <br><br>
+
+ 
+ 
+ 
+ 
+#program od exception haNDLING TO DEMONSTRATE raise an exception x=int(input("enter a no.=")) 
+try: if x==2:         raise IOError     x=x+10     print(x) 
+ 
+except IOError: 
+    print("an IOError is raised") else:     print("value is not 2") 
+ 
+ 
+ <br><br>
+ 
+ 
+ 
+ 
+#program of exception handling by printing contents of exception 
+try: 
+    x=int(input("enter a no.="))     r=100/x except Exception as e: 
+     print("Exception:",type(e)) else: 
+     print(r) 
+         
+ 
+ 
+ 
+ <br><br>
+
+#program to find marks obtained by a student using class class student: 
+ 
+     def inputstudentdata(Self): 
+         Self.rollno=int(input("Enter the roll number:"))          Self.name=input("Enter students name:")          print("Enter marks for three subject:") 
+         Self.sub1=int(input("subject 1:")) 
+         Self.sub2=int(input("subject 2:")) 
+         Self.sub3=int(input("subject 3:")) 
+         Self.MOBT=Self.sub1+Self.sub2+Self.sub3 
+ 
+     def showstudentdata(Self): 
+         print("roll number:",Self.rollno)          print("students name:",Self.name)          print("marks obtained:",Self.MOBT) 
+ 
+#main module 
+s1=student() s1.inputstudentdata() s1.showstudentdata()     
+ <br><br>
+ 
+ 
+ 
+ 
+#write a program to declare a class named students as two functions to input student information 
+#and display student information.Implement from n number. 
+class student: 
+     
+     def inputstudentData(self): 
+        self.rollnumber=int(input("Enter the roll number:"))         self.name=input("Enter the students name:")         print("enter Marks for three subject:")          self.sub1=int(input("subject 1:"))         self.sub2=int(input("subject 2:"))         self.sub3=int(input("subject 3:"))         self.MOBT=self.sub1+self.sub2+self.sub3 
+ 
+     def showstudentData(self): 
+         print("rollnumber:",self.rollnumber)          print("studentname:",self.name)          print("marksobtained:",self.MOBT) 
+ 
+#main module 
+studentList=[] n=int(input("how many students :")) 
+for i in range(n):     s=student() 
+    s.inputstudentData()     studentList.append(s) 
+ 
+for i in studentList: 
+    i.showstudentData() 
+     
+ 
+ 
+ 
+ <br><br>
+
+#program to demonstrate the use of constructor class student: 
+    def __init__(self,rollno,name,age): 
+        self.rollno=rollno 
+        self.name=name         self.age=age 
+ 
+    def display(self): 
+        print("rollno:",self.rollno,end='\t\t')         print("name:",self.name,end='\t\t')         print("age:",self.age,end='\t\t') 
+ 
+#main module 
+r1=input("Enter your roll no:") name=input("Enter your name:") age=input("Enter age:") stu=student(r1,name,age) stu.display() 
+ 
+ 
+ 
+ 
+ 
+ 
+ <br><br>
+#my first class program in python using public and private 
+class st:     y=2     __v=4     def show(self):         print("good morning")         print("y=",self.y)         print("x=",self.__v) 
+#main module 
+s=st() 
+s.show() print(s.y) print(s.__v) 
+ 
+ 
+ 
+ 
+ <br><br>
+ 
+ 
+#program to demonstrate the use of class in python 
+ 
+class st: 
+  def show(self): 
+      print("Good Morning") 
+ 
+#main module 
+s=st() 
+s.show() 
+ 
+ 
+ 
+ <br><br>
+ 
+#program to demonstrate use of super()method 
+class c1:     def f1(self): 
+        print("now in base class") class c2(c1):     def f1(self):         print("now in derived") 
+        super().f1() 
+obj1=c2() 
+obj1.f1() 
+ 
+ 
+ 
+ <br><br>
+ 
+#demonstration of encapsulation 
+class s1:     def __init__(self):         self.__show1()     def show(self):         print("manpreet kaur")         print("yashraj")         print("reshma")     def __show1(self):         print("good morning")     a=20 
+    __b=25 
+ 
+#main module 
+obj1=s1() obj1.show() #obj1.__show1()will give an error print(obj2.a) print(obj__b)#will give an error 
+ 
+ 
+ 
+ 
+ <br><br>
+#program for multiple inheritance class s1:     def f1(self):         self.n1=7 
+        print("number 1=",self.n1) class s2:     def f2(self):         self.n2=8 
+        print("number 2=",self.n2) class s3(s1,s2):     def add(self): 
+        #self.f1() 
+        #self.f2() 
+        self.n3=self.n1+self.n2         return self.n3 
+#main module 
+s=s3() 
+s.f1() 
+s.f2() 
+sum=s.add() print("sum=",sum) 
+ 
+ 
+ 
+ 
+ 
+ 
+ <br><br>
+#python program to demonstrate use of method overroding 
+class c1:     def f1(self): 
+        print("now in base class") 
+class c2(c1):     def f1(self):         print("now in derived") 
+#main module obj1=c2() obj1.f1() obj2.c1() obj2.f1() 
+ 
+ 
+ 
+<br><br>
+#demonstration of static method 
+class s1: 
+    @staticmethod     def sdemo():         print("hello")     def show(self):         print("hello class") 
+#main module 
+s=s1() 
+s.show() s1.sdemo() 
+ 
+ 
+<br><br>
+ 
+#python to use destructor 
+class st:     def __init__(self,n):         print("hello:",n)     def __del__(self):         print("object deleted") 
+ 
+n1="akshit" n2="atharva" n3="pranav" 
+v=st(n3) v=st(n1) v=st(n2) 
+ 
+ 
+ 
+<br><br>
+#python to demonstrate deletion of an object class student:     def __init__(self,rollno,name,age): 
+        self.rollno=rollno         self.name=name 
+        self.age=age 
+ 
+    def display(self): 
+        print(self.rollno,end="\t\t")         print(self.name,end="\t\t")         print(self.age,end="\t\t") 
+ 
+    def __del__(self):         print("object deleted") 
+ 
+#main module 
+rollno=int(input("enter your rollno.")) name=input("enter your name") age=int(input("enter the age")) stu=student(rollno,name,age) 
+ 
+stu.display() stu=student(235,"akshit",19) stu.display() 
+ 
+ <br><br>
+ 
+ 
+#program using user defined module calc.py import calc while True: 
+    print("\n\n \t\t main module")     print("1.to find sum of two numbers")     print("2. to find difference of two numbers")     print("3. to find multipication of two numbers")     print("4. to find division of two numbers") 
+    print("5.exit")     ch=int(input("enter the choice form (1-5): ")) 
+    if ch!= 5: 
+        a=int(input("Enter any number(a):"))         b=int(input("Enter any number(b):")) 
+ 
+    if ch==1:         calc.sum_of_number(a,b) 
+    elif ch==2: 
+        calc.difference_of_number(a,b) 
+    elif ch==3: 
+        calc.multiplication_of_number(a,b) 
+    elif ch==4: 
+        calc.division_of_number(a,b) 
+    else: 
+        print("program is terminated")         break 
+ 
+#calc module def sum_of_number(a,b): 
+    sum=a+b     print("sum of two number=",sum) 
+ 
+def difference_of_number(a,b): 
+    diff=a-b 
+    print("difference of two number=",diff) 
+ 
+def multiplication_of_number(a,b): 
+    mul=a*b     print("multiplication of two number=",mul) 
+ 
+def division_of_number(a,b): 
+    div= a/b     print("division of two numbers=",div) 
+ 
+ 
+ <br><br>
+ 
+ 
+#demonstration of thread creation using threading import threading import time 
+ 
+flag=0 class myI(threading.Thread):     def __init__(self,tid,name,cntr):         threading.Thread.__init__(self) 
+        self.tid=tid 
+        self.name=name         self.cntr=cntr     def run(self): 
+        print("starting "+self.name)         print_time(self.name,self.cntr,5)         print("exiting "+self.name) 
+ 
+def print_time(tnm,cntr,delay):     while cntr: 
+        if flag:             tnm.exit()         time.sleep(delay)         print("%s: %s "%(tnm,time.ctime(time.time()))) 
+ 
+#Main Module 
+thread1 = myI(1,"thread 1",1) thread2 = myI(2,"thread 2",2) thread3 = myI(3,"thread 3",4) thread1.start() thread2.start() thread3.start() thread1.join() thread2.join() thread3.join() print("Good bye") 
+ 
+ <br><br>
+ 
+ 
+ 
+#program to demonstrate polymorphism 
+class Cat:     def __init__(self,name,age): 
+        self.name=name 
+        self.age=age 
+ 
+    def info(self): 
+        print("I am a cat. My name is ",self.name,". I am ",self.age," years old.") 
+ 
+    def make_sound(self): 
+        print("Meow") 
+ 
+class Dog:     def __init__(self,name,age): 
+        self.name=name 
+        self.age=age 
+ 
+    def info(self): 
+        print("I am a dog. My name is ",self.name,". I am ",self.age," years old.") 
+ 
+    def make_sound(self): 
+        print("Bark") 
+ 
+#Main Module 
+cat1=Cat("Kitty",2.5) dog1=Dog("Fluffy",4) for animal in (cat1,dog1):     animal.make_sound() 
+    animal.info()     animal.make_sound() 
+     
+ 
+ <br><br>
+
+ 
+ 
+#write an interactive pytrhon program to find area of rectangle,square,circlle,cube,triangle using concept of module import module as mod print("\n\n\t\tMain Menu") 
+print("1. Find area of circle") print("2. Find area of square") print("3. Find area of rectangle") print("4. Find area of triangle") print("5. Find area of cube") print("6. Exit") 
+ 
+while True: 
+    choice=int(input("Enter your choice(1-6): "))     if choice==1: 
+        mod.areacircle()     elif choice==2:         mod.areasq()     elif choice==3:         mod.arearect()     elif choice==4:         mod.areatri()     elif choice==5:         mod.areacube()     else: 
+        print("\nProgram is terminated") 
+        break 
+ 
+ 
+ <br><br>
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+       
+
+
+
+
+ </pre>
+</body>
+
+</html>
